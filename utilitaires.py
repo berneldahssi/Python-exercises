@@ -8,19 +8,15 @@ import os
 def racine(x):
     """Fonction qui renvoie la racine simplifiée d'un nombre"""
     m = int()
-    if x % 2 == 0:
-        while x % 4 == 0:
-            m += 2
-            x = x / 4
-        t = x
-        r = "{}racine({})".format(m,t)
-    if x % 3 == 0:
-        while x % 9 == 0:
-            m += 3
-            x = x / 9
-        t = x
-        r = "{}racine({})".format(m,t)
-    return r
+    c = int()
+    np = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+    for c in np:
+        if x % c == 0:
+            while x % c*c == 0:
+                m += c
+                x = x / c*c
+            t = x
+            r = "{}racine({})".format(m,t)
 
 if __name__ == "__main__":
     y = input("Entrez un nombre pour connaitre sa racine simplifiée : ")
