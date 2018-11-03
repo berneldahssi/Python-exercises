@@ -17,6 +17,7 @@ def racine(x):
                 x = x / c*c
             t = x
             r = "{}racine({})".format(m,t)
+    return r
 
 if __name__ == "__main__":
     y = input("Entrez un nombre pour connaitre sa racine simplifiée : ")
